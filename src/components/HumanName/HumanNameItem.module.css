@@ -1,0 +1,93 @@
+.item {
+    margin: 1rem 0;
+    background-color: hsl(201, 88%, 16%);
+    padding: 1rem;
+}
+
+
+/* .noitem {
+    margin: 1rem 0;
+        background-color: hsl(19, 81%, 38%);
+        padding: 1rem;
+} */
+
+.indexwrap {
+  
+            margin: 1rem 0;
+         
+            padding: 1rem;
+       
+}
+.index {
+        margin: 5rem 2;
+        background-color: hsl(168, 81%, 38%);
+        padding: 1rem;
+        width: 100px;
+            height: 100px;
+            padding: 13px 18px;
+            border-radius: 60px;
+            font-size: 15px;
+            text-align: center;
+    }
+.item h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    color: rgb(51, 235, 15)
+}
+
+.item h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    color: rgb(206, 8, 206)
+}
+
+.item header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantity span {
+    margin: 1rem 0;
+    justify-content: space-between;
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.itemdescription {
+    font-weight: normal;
+    font-size: 1rem;
+    font-style: Bold;
+    color: ghostwhite
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.5rem 0;
+}
+
+.actions button {
+    background-color: transparent;
+    border: 0px solid white;
+    margin-left: 0.5rem;
+    padding: 0.15rem 1rem;
+    color: white;
+}
+
+.actions button:hover,
+.actions button:active {
+    background-color: #cc9107;
+    color: white;
+}

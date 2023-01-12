@@ -1,0 +1,17 @@
+{
+  "address": "Address",
+  "nickname": "NickName",
+  "email": "Email",
+  "picture": "Picture",
+  "family name": "Family Name",
+  "preferred username": "Preferred User Name",
+  "gender": "Gender",
+  "profile": "Profile",
+  "given name": "Given Name",
+  "zoneinfo": "Zone Info",
+  "locale": "Locale",
+  "updated at": "Updated At",
+  "middle name": "Middle Name",
+  "website": "Website",
+  "name": "Name"
+}

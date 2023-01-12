@@ -1,0 +1,29 @@
+.cardContainer {
+    max-width: 100rem;
+    background-color: #cbbdd2;
+    color: white;
+}
+
+.cardContainer h2 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+.title {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+    color: white;
+}
+
+.title1 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 0 0 0 0;
+    color: white;
+}
+
+.cardContainer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
