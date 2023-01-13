@@ -18,20 +18,19 @@ import { TiDeleteOutline } from "react-icons/ti";
 import { API } from "../../utilities/API";
 const deleteRequest = async (id) => {
   console.log("Invoking API with delete");
-  const data = await API(`/poc1/Location/${id}`, null, "DELETE");
+ 
+  const data = await API(
+    `https://h6i9k20b08.execute-api.us-east-1.amazonaws.com/dev00/tenant/tenant1/Location/${id}`,
+    null,
+    "DELETE"
+  );
   return data;
 };
 
-
-
-
-
-const LocationItem = ({item}) => {
+const LocationItem = ({ item }) => {
   const dispatch = useDispatch();
 
-
-
-  const deleteItemHandler = async() => {
+  const deleteItemHandler = async () => {
     await deleteRequest(item?.id);
     dispatch(locationActions.deleteItem(item?.id));
   };

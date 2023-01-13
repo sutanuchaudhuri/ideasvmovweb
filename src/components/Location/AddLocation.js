@@ -72,7 +72,8 @@ let addressDefault = {
 
   const sendRequest = async (location) => {
     location.resourceType = "Location";
-    let url = "/dev00/tenant/tenant1/Location";
+    let baseurl="https://h6i9k20b08.execute-api.us-east-1.amazonaws.com/";
+    let url = baseurl+"/dev00/tenant/tenant1/Location";
     let method = "POST";
     console.log("Sending Data....");
     if (location.id) {
