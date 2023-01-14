@@ -1,7 +1,7 @@
 import { Auth } from "aws-amplify";
 
 export const API = async (proxyURL, requestBody = null, method = "GET") => {
-  const PROXY_API_URL = "https://corsproxy.io/?" + encodeURIComponent(proxyURL); // "/poc1/Location";
+  const PROXY_API_URL = "https://corsproxy.io/?url=" + encodeURIComponent(proxyURL); // "/poc1/Location";
   const API_KEY = "dQkMjACFXyyGvgp8Od2V5GZkLsjqkPu6eUnRIjYc";
   let loggedUser = await Auth.currentAuthenticatedUser();
   let COGNITO_TOKEN = loggedUser.signInUserSession.idToken.jwtToken;
