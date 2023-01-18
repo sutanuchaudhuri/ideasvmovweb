@@ -36,7 +36,14 @@ function LocationPage() {
         <Button variant="outline-secondary" size="md">
           <Link to="/addlocation">Create Location</Link>
         </Button>
-        <LocationList />
+        <div
+          style={{
+              flex: 1,
+           overflow: 'scroll'
+          }}
+        >
+          <LocationList />
+        </div>
       </CardContainer>
     );
   }

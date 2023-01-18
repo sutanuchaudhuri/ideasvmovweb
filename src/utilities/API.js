@@ -1,7 +1,8 @@
 import { Auth } from "aws-amplify";
 
 export const API = async (proxyURL, requestBody = null, method = "GET") => {
-  const PROXY_API_URL = "https://cors-anywhere.herokuapp.com/" + proxyURL; // "/poc1/Location";
+  const PROXY_API_URL =
+    "http://ec2-54-235-231-52.compute-1.amazonaws.com:8080/" + proxyURL; // "/poc1/Location";
   const API_KEY = "dQkMjACFXyyGvgp8Od2V5GZkLsjqkPu6eUnRIjYc";
   let loggedUser = await Auth.currentAuthenticatedUser();
   let COGNITO_TOKEN = loggedUser.signInUserSession.idToken.jwtToken;
