@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import classes from "./PatientItem.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-const PatientItem = ({ item, index, handleToggle }) => {
+const AdminHome = ({ item, index, handleToggle }) => {
   console.log("In patient Item");
   return (
     <Card className={classes.item}>
@@ -22,7 +22,10 @@ const PatientItem = ({ item, index, handleToggle }) => {
               {" "}
               <Row className={classes.item}>
                 <Col> {item.name?.text}</Col>
-                <Col> {item.active??true==true?"Active":"Inactive"}</Col>
+                <Col>
+                  {" "}
+                  {item.active ?? true == true ? "Active" : "Inactive"}
+                </Col>
               </Row>
             </Col>
           </Row>
@@ -33,4 +36,4 @@ const PatientItem = ({ item, index, handleToggle }) => {
   );
 };
 
-export default PatientItem;
+export default AdminHome;

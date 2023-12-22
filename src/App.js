@@ -21,6 +21,7 @@ import LocationPage from "./pages/LocationPage";
 import Container from "react-bootstrap/Container";
 import AddLocationPage from "./pages/AddLocationPage";
 import AddPatientPage from "./pages/AddPatientPage";
+import AdminHomePage from "./pages/AdminHomePage";
 Amplify.configure(awsExports);
 
 function App({ signOut, user }) {
@@ -41,6 +42,7 @@ function App({ signOut, user }) {
           <Route path="/location" element={<LocationPage />} />
           <Route path="/addlocation" element={<AddLocationPage />} />
           <Route path="/addPatient" element={<AddPatientPage />} />
+          <Route path="/admin" element={<AdminHomePage />} />
         </Routes>
       </Router>
 
