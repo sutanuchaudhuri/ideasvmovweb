@@ -1,9 +1,9 @@
 import { Auth } from "aws-amplify";
-
+import awsExports from "../aws-exports";
 export const API = async (proxyURL, requestBody = null, method = "GET") => {
-  const PROXY_API_URL =
-    "http://ec2-54-235-231-52.compute-1.amazonaws.com:8080/" + proxyURL; // "/poc1/Location";
-  const API_KEY = "dQkMjACFXyyGvgp8Od2V5GZkLsjqkPu6eUnRIjYc";
+  const PROXY_API_URL = awsExports.fhir_server_developer_key;
+   
+  const API_KEY = awsExports.fhir_server_api_key;
   let loggedUser = await Auth.currentAuthenticatedUser();
   let COGNITO_TOKEN = loggedUser.signInUserSession.idToken.jwtToken;
   let headers = {

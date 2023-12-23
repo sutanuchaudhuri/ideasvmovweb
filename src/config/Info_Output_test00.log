@@ -1,0 +1,72 @@
+{
+  "fhir-service-uat": {
+    "userPoolAppClientId": "2qs1sr3hapqpl8ltsoracut52l",
+    "developerApiKeyOutput": "fhir-service-uat/apiGatewayRestApi/developerApiKey",
+    "resourceDynamoDbTableStreamArnOutput": "arn:aws:dynamodb:us-east-1:066316407456:table/resource-db-uat/stream/2023-01-03T22:59:34.980",
+    "resourceDynamoDbTableArnOutput": "arn:aws:dynamodb:us-east-1:066316407456:table/resource-db-uat",
+    "exportRequestDynamoDbTableArnOutput": "arn:aws:dynamodb:us-east-1:066316407456:table/resource-db-uat",
+    "FHIRBinaryBucket": "arn:aws:s3:::fhir-service-uat-fhirbinarybucket6fe2a212-quu7p8u76dif",
+    "apiGatewayRestApiEndpointFBFD80D6": "https://7u27kmvxv6.execute-api.us-east-1.amazonaws.com/uat/",
+    "elasticsearchDomainEndpointOutput": "search-elasticsearchdo-evdivnql1l3g-2wamtcae5omyltwcbl2gzsivta.us-east-1.es.amazonaws.com",
+    "userPoolId": "us-east-1_Dl7VvDFFv"
+  }
+}
+## RUN command
+serverless info --verbose --aws-profile fhir --stage test00 --region us-east-1
+Service Information
+service: fhir-service
+stage: test00
+region: us-east-1
+stack: fhir-service-test00
+resources: 140
+api keys:
+  developer-key-test00: YoKGICDeQv7u8SaUhbMZB8z2vj0rHuEy3IUFrCwk - Key for developer to access the FHIR Api
+endpoints:
+  ANY - https://3li702snya.execute-api.us-east-1.amazonaws.com/test00
+  ANY - https://3li702snya.execute-api.us-east-1.amazonaws.com/test00/{proxy+}
+  GET - https://3li702snya.execute-api.us-east-1.amazonaws.com/test00/metadata
+  GET - https://3li702snya.execute-api.us-east-1.amazonaws.com/test00/tenant/{tenantId}/metadata
+functions:
+  fhirServer: fhir-service-test00-fhirServer
+  ddbToEs: fhir-service-test00-ddbToEs
+  subscriptionsMatcher: fhir-service-test00-subscriptionsMatcher
+  startExportJob: fhir-service-test00-startExportJob
+  stopExportJob: fhir-service-test00-stopExportJob
+  getJobStatus: fhir-service-test00-getJobStatus
+  updateStatus: fhir-service-test00-updateStatus
+  uploadGlueScripts: fhir-service-test00-uploadGlueScripts
+  updateSearchMappings: fhir-service-test00-updateSearchMappings
+  subscriptionReaper: fhir-service-test00-subscriptionReaper
+  subscriptionsRestHook: fhir-service-test00-subscriptionsRestHook
+layers:
+  None
+
+Stack Outputs
+UploadGlueScriptsLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:066316407456:function:fhir-service-test00-uploadGlueScripts:1
+BulkExportStateMachineArn: arn:aws:states:us-east-1:066316407456:stateMachine:BulkExportStateMachine-YhAFvmUqLi9J
+ElasticSearchDomainEndpoint: https://search-fhir-se-elasti-1iohgchad6jjc-ijn3kswpzyzezhorcmiukugi5e.us-east-1.es.amazonaws.com
+ServerlessDeploymentBucketName: fhir-service-test00-serverlessdeploymentbucket-9mxevncqtqax
+CloudwatchExecutionLogGroupArn: arn:aws:logs:us-east-1:066316407456:log-group:API-Gateway-Execution-Logs_3li702snya/test00:log-stream:*
+FhirServerLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:066316407456:function:fhir-service-test00-fhirServer:1
+UpdateStatusLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:066316407456:function:fhir-service-test00-updateStatus:1
+UserPoolAppClientId: 5j7uujjn4dtpt5obv863q4fn9q
+ResourceDynamoDBTableV2Arn: arn:aws:dynamodb:us-east-1:066316407456:table/resource-db-test00
+StopExportJobLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:066316407456:function:fhir-service-test00-stopExportJob:1
+CloudwatchExecutionLogGroup: API-Gateway-Execution-Logs_3li702snya/test00
+ResourceDynamoDBTableV2StreamArn: arn:aws:dynamodb:us-east-1:066316407456:table/resource-db-test00/stream/2023-02-27T04:12:07.991
+CloudwatchAccessLogGroupArn: arn:aws:logs:us-east-1:066316407456:log-group:/aws/api-gateway/fhir-service-test00:*
+StartExportJobLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:066316407456:function:fhir-service-test00-startExportJob:1
+SubscriptionsMatcherLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:066316407456:function:fhir-service-test00-subscriptionsMatcher:1
+FHIRBinaryBucket: fhir-service-test00-fhirbinarybucket-1em0moexqf1uk
+ExportRequestDynamoDBTableArn: arn:aws:dynamodb:us-east-1:066316407456:table/export-request-test00
+DdbToEsLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:066316407456:function:fhir-service-test00-ddbToEs:1
+UserPoolId: us-east-1_oqreHUadH
+SubscriptionReaperLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:066316407456:function:fhir-service-test00-subscriptionReaper:1
+GetJobStatusLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:066316407456:function:fhir-service-test00-getJobStatus:1
+SubscriptionsRestHookLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:066316407456:function:fhir-service-test00-subscriptionsRestHook:1
+CloudwatchAccessLogGroup: /aws/api-gateway/fhir-service-test00
+UpdateSearchMappingsLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:066316407456:function:fhir-service-test00-updateSearchMappings:1
+ServiceEndpoint: https://3li702snya.execute-api.us-east-1.amazonaws.com/test00
+
+
+Client Id 5j7uujjn4dtpt5obv863q4fn9q

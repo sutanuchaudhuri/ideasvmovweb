@@ -3,6 +3,8 @@
 
 const awsExports = {
   aws_project_region: "us-east-1",
+  strapi_readonly_token:
+    "5dc3554722f28494a2660883bd60191dfca9fcb0a05daa3b8e99123f3b260e9933b4e55ab764fd6bab6173ca1c67d6233da29c56c3efdfbd334f6882daeab66b51a54205e8d463940f68849193af000f90dfcf7259a101dfee01cebea022957fb4871959ba67c1881a08817f0d57d618fa95b63f7da19c06c6023979ec5d3b7a",
 
   aws_cognito_identity_pool_id:
     "us-east-1:a4f5cb4a-8cbd-41a7-9cd1-452f688c6bb7",
@@ -10,6 +12,7 @@ const awsExports = {
   aws_user_pools_id: "us-east-1_U1kceR4oE", //"us-east-1_sNZ08Q2YU",
   aws_user_pools_web_client_id: "1oat4l9q6po7c237l07bj1qgso", // "6pptid0ufgds2hv2tqet90o68a",
   oauth: {},
+  strapi_url_value_sets: "https://ideasimov-reseource.com/api/value-sets",
   aws_cognito_username_attributes: [],
   aws_cognito_social_providers: [],
   aws_cognito_signup_attributes: ["EMAIL"],
@@ -20,6 +23,12 @@ const awsExports = {
     passwordPolicyCharacters: [],
   },
   aws_cognito_verification_mechanisms: ["EMAIL"],
+
+  fhir_server_endpoint:
+    "https://h6i9k20b08.execute-api.us-east-1.amazonaws.com/dev00",
+  fhir_server_api_key: "dQkMjACFXyyGvgp8Od2V5GZkLsjqkPu6eUnRIjYc",
+
+  
 };
 
 export default awsExports;

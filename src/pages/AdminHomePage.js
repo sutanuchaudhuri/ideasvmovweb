@@ -7,6 +7,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
+import awsExports from "../aws-exports";
+
+
 function AdminHomePage() {
   const [patients, setPatients] = useState([]);
   const [selectedPatient, setSelectedPatient] = useState(null);
@@ -15,6 +18,8 @@ function AdminHomePage() {
   const PROXY_API_URL = "/poc1/Patient";
   const API_KEY = "NAXKccFsa667EYPnHyfsW3PKyYzVu3Wp6n6Z0vpM";
   const [cognitoToken, setCognitoToken] = useState("");
+
+  
 
   const fetchPatientHandler = useCallback(async function () {
     setIsLoading(true);
@@ -53,14 +58,6 @@ function AdminHomePage() {
     `}
         </style>
 
-        {/* <Stack direction="horizontal" gap={2}>
-      <Form.Control className="me-auto" placeholder="Add your item here..." />
-      <Button variant="secondary">Submit</Button>
-      <div className="vr" />
-      <Button variant="outline-danger">Reset</Button>
-
-      
-    </Stack> */}
         <Stack direction="horizontal" gap={2}>
           <Button as="a" size="xxl" variant="primary">
             Admin test button
@@ -69,7 +66,9 @@ function AdminHomePage() {
             Admin some button as link
           </Button>
           <ThemeProvider prefixes={{ btn: "my-btn" }}>
-            <Button variant="primary">Admin Button</Button>
+            <Button variant="primary">
+              Admin Button {awsExports.strapi_readonly_token}
+            </Button>
           </ThemeProvider>{" "}
         </Stack>
         {/* {patients.map((patient, index) => (

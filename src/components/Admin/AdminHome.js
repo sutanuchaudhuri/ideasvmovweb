@@ -4,7 +4,7 @@ import classes from "./PatientItem.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 const AdminHome = ({ item, index, handleToggle }) => {
-  console.log("In patient Item");
+  console.log("In Admin Item");
   return (
     <Card className={classes.item}>
       <Card.Body>
