@@ -12,7 +12,7 @@ const awsExports = {
   aws_user_pools_id: "us-east-1_U1kceR4oE", //"us-east-1_sNZ08Q2YU",
   aws_user_pools_web_client_id: "1oat4l9q6po7c237l07bj1qgso", // "6pptid0ufgds2hv2tqet90o68a",
   oauth: {},
-  strapi_url_value_sets: "https://ideasimov-reseource.com/api/value-sets",
+  strapi_url_value_sets: "/api/value-sets",
   aws_cognito_username_attributes: [],
   aws_cognito_social_providers: [],
   aws_cognito_signup_attributes: ["EMAIL"],

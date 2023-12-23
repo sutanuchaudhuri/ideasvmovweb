@@ -8,19 +8,21 @@ export const StrapiAPI = async (
   org = "TENANT1",
   version = "0.01"
 ) => {
-  const PROXY_API_URL = `${awsExports.strapi_url_value_sets}?filters[$and][0][valuesetkey][$eq]=${strapikey}`;
+  // ${awsExports.strapi_url_value_sets}
+  
+  const PROXY_API_URL = `/api/value-sets?filters[$and][0][valuesetkey][$eq]=${strapikey}`;
   const API_KEY = awsExports.strapi_readonly_token;
-  let headers1 = {
+  let headers = {
     method: method,
     Authorization: `Bearer ${API_KEY}`,
     "Access-Control-Allow-Origin": "*",
   };
-  let headers = {
-    // "Content-Type": "application/json",
-    method: method,
-    bearer: API_KEY,
-    "Access-Control-Allow-Origin": "*",
-  };
+  // let headers = {
+  //   // "Content-Type": "application/json",
+  //   method: method,
+  //   bearer: API_KEY,
+  //   "Access-Control-Allow-Origin": "*",
+  // };
 
   const requestOptions = {
     headers: headers,
