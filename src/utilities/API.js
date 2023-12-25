@@ -11,7 +11,6 @@ export const API = async (proxyURL, requestBody = null, method = "GET") => {
   let COGNITO_TOKEN = loggedUser.signInUserSession.idToken.jwtToken;
   let headers = {
     "Content-Type": "application/json",
-    mode: "no-cors",
     "x-api-key": API_KEY,
     Authorization: COGNITO_TOKEN,
   };

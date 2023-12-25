@@ -6,7 +6,7 @@ import { API } from "../utilities/API";
 const fetchData = async () => {
   console.log("Fetching Data....");
   const data = await API(
-    "https://h6i9k20b08.execute-api.us-east-1.amazonaws.com/dev00/tenant/tenant1/Location"
+    "Location"
   );
   return data;
 };
@@ -14,7 +14,7 @@ const fetchData = async () => {
 const sendRequest = async (location) => {
   location.resourceType = "Location";
   let url =
-    "https://h6i9k20b08.execute-api.us-east-1.amazonaws.com/dev00/tenant/tenant1/Location";
+    "Location";
   let method = "POST";
   console.log("Sending Data....");
   if (location.id) {
