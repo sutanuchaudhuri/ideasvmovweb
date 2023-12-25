@@ -25,7 +25,7 @@ const awsExports = {
   aws_cognito_verification_mechanisms: ["EMAIL"],
 
   fhir_server_endpoint:
-    "https://h6i9k20b08.execute-api.us-east-1.amazonaws.com/dev00",
+    "https://h6i9k20b08.execute-api.us-east-1.amazonaws.com/dev00/tenant",
   fhir_server_api_key: "dQkMjACFXyyGvgp8Od2V5GZkLsjqkPu6eUnRIjYc",
 
   

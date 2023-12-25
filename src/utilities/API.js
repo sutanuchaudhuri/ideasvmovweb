@@ -1,14 +1,16 @@
 import { Auth } from "aws-amplify";
 import awsExports from "../aws-exports";
 export const API = async (proxyURL, requestBody = null, method = "GET") => {
-  const PROXY_API_URL = awsExports.fhir_server_developer_key;
-   
+  const PROXY_API_URL = `${awsExports.fhir_server_endpoint}/tenant1/${proxyURL}`;
+  console.log(PROXY_API_URL);
   const API_KEY = awsExports.fhir_server_api_key;
   let loggedUser = await Auth.currentAuthenticatedUser();
+
+  console.log(JSON.stringify(loggedUser));
+  //const TENANT_ID = loggedUser;
   let COGNITO_TOKEN = loggedUser.signInUserSession.idToken.jwtToken;
   let headers = {
     "Content-Type": "application/json",
-    method: method,
     mode: "no-cors",
     "x-api-key": API_KEY,
     Authorization: COGNITO_TOKEN,
@@ -25,7 +27,9 @@ export const API = async (proxyURL, requestBody = null, method = "GET") => {
   }
 
   try {
-    console.log(`MAKING THE ${method} CALL .. with API infrastructure...`);
+    console.log(
+      `MAKING THE ${method} CALL .. with API infrastructure...URL =${PROXY_API_URL}`
+    );
     const response = await fetch(PROXY_API_URL, requestOptions);
 
     if (!response.ok) {

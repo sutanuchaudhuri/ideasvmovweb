@@ -72,8 +72,8 @@ let addressDefault = {
 
   const sendRequest = async (location) => {
     location.resourceType = "Location";
-    let baseurl="https://h6i9k20b08.execute-api.us-east-1.amazonaws.com/";
-    let url = baseurl+"/dev00/tenant/tenant1/Location";
+    
+    let url = "Location";
     let method = "POST";
     console.log("Sending Data....");
     if (location.id) {
@@ -92,7 +92,7 @@ let addressDefault = {
         return;
       }
 
-      const jsonRs = await API("/poc1/Location?name=" + event.target.value);
+      const jsonRs = await API("Location?name=" + event.target.value);
       if (jsonRs?.entry.length > 0) {
         console.log(jsonRs?.entry);
 

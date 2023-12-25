@@ -20,7 +20,7 @@ const deleteRequest = async (id) => {
   console.log("Invoking API with delete");
  
   const data = await API(
-    `https://h6i9k20b08.execute-api.us-east-1.amazonaws.com/dev00/tenant/tenant1/Location/${id}`,
+    `Location/${id}`,
     null,
     "DELETE"
   );

@@ -22,6 +22,8 @@ function AdminHomePage() {
   
 
   const fetchPatientHandler = useCallback(async function () {
+     let loggedUser = await Auth.currentAuthenticatedUser();
+     setCognitoToken(loggedUser.signInUserSession.idToken.jwtToken);
     setIsLoading(true);
     setError(null);
     let headers = {};
@@ -33,6 +35,7 @@ function AdminHomePage() {
 
   useEffect(() => {
     fetchPatientHandler();
+    
   }, [fetchPatientHandler]);
   if (isLoading) {
     return <div>Loading ..</div>;
@@ -77,6 +80,9 @@ function AdminHomePage() {
             <Col>{patient?.resource?.name[0]?.given[0]} </Col>{" "}
           </Row>
         ))} */}
+        <Row>
+          <Col xs={4}> {cognitoToken}</Col>
+        </Row>
       </Container>
     );
   }
