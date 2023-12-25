@@ -4,29 +4,15 @@ import awsExports from "../aws-exports";
 export const StrapiAPI = async (
   strapikey,
   requestBody = null,
-  method = "GET",
+  method = "POST",
   org = "TENANT1",
   version = "0.01"
 ) => {
-  // ${awsExports.strapi_url_value_sets}
-  
-  const PROXY_API_URL = `/api/value-sets?filters[$and][0][valuesetkey][$eq]=${strapikey}`;
-  const API_KEY = awsExports.strapi_readonly_token;
-  let headers = {
-    method: method,
-    Authorization: `Bearer ${API_KEY}`,
-    "Access-Control-Allow-Origin": "*",
-  };
-  // let headers = {
-  //   // "Content-Type": "application/json",
-  //   method: method,
-  //   bearer: API_KEY,
-  //   "Access-Control-Allow-Origin": "*",
-  // };
+  const PROXY_API_URL = `https://z2wsmj5xgnzzlalectvhsd52k40vffll.lambda-url.us-east-1.on.aws?strapikey=${strapikey}&org=${org}&version=${version}`;
+  // const API_KEY = awsExports.strapi_readonly_token;
 
   const requestOptions = {
-    headers: headers,
-    method: method.toUpperCase(),
+    method: "POST",
   };
   console.log(requestOptions);
   if (method.toUpperCase() === "POST" || method.toUpperCase() === "PUT") {
@@ -44,7 +30,6 @@ export const StrapiAPI = async (
     if (!response.ok) {
       throw new Error("Something went wrong during STRAPI POST call!");
     }
-    //const jsonRs = await response.json();
 
     let rsjson = await response.json();
     rsjson = rsjson.data.map((x) => {
@@ -52,9 +37,6 @@ export const StrapiAPI = async (
     });
 
     return rsjson;
-
-    //   const jsonRs = await response.json();
-    // setActionCount({ ...actionCount, count: actionCount.count + 1 });
   } catch (error) {
     console.log(error);
   }
