@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Schedule() {
+function OrganizationPage() {
     return (
         <div className="home">
-            <h1>Schedule</h1>
+            <h1>Organization</h1>
         </div>
     );
 }
 
-export default Schedule;
+export default OrganizationPage;

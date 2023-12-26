@@ -13,12 +13,7 @@ import Card from '../UI/Card';
 import classes from './Location.module.css';
 
 function LocationList() {
-  //Adding redux methods
-  // const mapStateToProps = (state) => {
-  //   return {
-  //     locationItems: state.location.items,
-  //   };
-  // };
+
 const locationItems = useSelector((state)=>state.location.items); 
     return (
           <ul>

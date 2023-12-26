@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Practitioner() {
+function UserAdminPage() {
     return (
         <div className="home">
-            <h1>Practitioner</h1>
+            <h1>User Admin</h1>
         </div>
     );
 }
 
-export default Practitioner;
+export default UserAdminPage;

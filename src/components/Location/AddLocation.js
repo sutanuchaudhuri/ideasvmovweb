@@ -302,7 +302,7 @@ background-color: hotpink;
                             size="md"
                             value={selectedLocationOperationStatus}
                             onChange={(x) => {
-                              setSelectedLocationOperationStatus(x);
+                              setLocationOperationStatus(x);
                             }}
                             defaultValue="Operation Status"
                           >

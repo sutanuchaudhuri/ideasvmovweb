@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Documents() {
+function DocumentsHomePage() {
     return (
         <div className="documents">
             <h1>Documents</h1>
@@ -9,4 +9,4 @@ function Documents() {
     );
 }
 
-export default Documents;
+export default DocumentsHomePage;

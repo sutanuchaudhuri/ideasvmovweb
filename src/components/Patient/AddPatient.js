@@ -30,7 +30,7 @@ const AddPatient = () => {
 
   const sendRequest = async (patient) => {
     patient.resourceType = "Patient";
-    let url = "/poc1/Patient";
+    let url = "Patient";
     let method = "POST";
     console.log("Sending Data....");
     if (patient.id) {

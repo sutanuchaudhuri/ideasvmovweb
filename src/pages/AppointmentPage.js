@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Appointment() {
+function AppointmentPage() {
     console.log('Loading appointment page');
     return (
         <div className="appointment">
@@ -10,4 +10,4 @@ function Appointment() {
     );
 }
 
-export default Appointment;
+export default AppointmentPage;

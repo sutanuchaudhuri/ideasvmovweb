@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Encounter() {
+function EncounterPage() {
     return (
         <div className="home">
             <h1>Encounter</h1>
@@ -8,4 +8,4 @@ function Encounter() {
     );
 }
 
-export default Encounter;
+export default EncounterPage;

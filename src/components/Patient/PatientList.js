@@ -8,14 +8,14 @@ import classes from "./PatientItem.module.css";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 function PatientList({ patientItems }) {
-  console.log("In identifier list START");
-  console.log(JSON.stringify(identifierItems));
 
-  if (identifierItems?.length == 0) {
+  console.log(JSON.stringify(patientItems));
+
+  if (patientItems?.length == 0) {
     return (
       <Card className={classes.noitem}>
         <Card.Body>
-          <Card.Text>No Ids have been added!</Card.Text>
+          <Card.Text>No Patients have been added!</Card.Text>
           {/* <Card.Subtitle className="mb-2">Primary</Card.Subtitle> */}
         </Card.Body>
       </Card>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PractitionerRole() {
+function PractitionerRolePage() {
     return (
         <div className="home">
             <h1>Practitioner Role</h1>
@@ -8,4 +8,4 @@ function PractitionerRole() {
     );
 }
 
-export default PractitionerRole;
+export default PractitionerRolePage;
